@@ -504,5 +504,10 @@
   "@nearform/bubbleprof": {
     "maintainers": ["mcollina", "BridgeAR"],
     "prefix": "v"
+  },
+  "@babel/core": {
+    "prefix": "v",
+    "yarn": true,
+    "skip": ["11"]
   }
 }
