@@ -136,13 +136,14 @@ For syntax, see [lookup.json](./lib/lookup.json), the available attributes are:
 "skipAnsi": true             Strip ansi data from output stream of npm
 "sha": "<git-commit-sha>"    Test against a specific commit
 "envVar"                     Pass an environment variable before running
-"install": ["--param1", "--param2"] - Array of extra command line parameters passed to 'npm install'
+"install": ["install", "--param1", "--param2"] - Array of command line parameters passed to 'npm' or 'yarn' as install arguments
 "maintainers": ["user1", "user2"] - List of module maintainers to be contacted with issues
 "scripts": ["script1", "script2"] - List of scripts from package.json to run instead of 'test'
 "tags": ["tag1", "tag2"]     Specify which tags apply to the module
 "useGitClone": true          Use a shallow git clone instead of downloading the module
 "ignoreGitHead":             Ignore the gitHead field if it exists and fallback to using github tags
 "yarn":                      Install and test the project using yarn instead of npm
+"timeout":                   Number of milliseconds before timeout. Applies separately to `install` and `test`
 ```
 
 If you want to pass options to npm, eg `--registry`, you can usually define an
